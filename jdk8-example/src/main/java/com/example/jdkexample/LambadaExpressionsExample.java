@@ -11,12 +11,12 @@ import java.util.function.Supplier;
 public class LambadaExpressionsExample {
 
     public static void main(String[] args) {
-        // example 1 ：Runnable 任务
+        // example 1 ：Runnable 任务 ，无参方式
         Runnable r = () -> System.out.println(Thread.currentThread().getName());
         Thread t = new Thread(r);
         t.start();
 
-        // example 2:： Comparator 比较器
+        // example 2:： Comparator 比较器 ，一个参数例子
         List<Integer> list = new ArrayList<Integer>();
         list.add(1);
         list.add(3);
@@ -28,7 +28,7 @@ public class LambadaExpressionsExample {
         // 变量打印参数
         list.forEach(v -> {System.out.println(v);});
 
-        // example 3: 集合的操作
+        // example 3: 集合的操作，多个参数例子
         Map<String, Integer> items = new HashMap<>(8);
         items.put("A", 10);
         items.put("B", 20);
