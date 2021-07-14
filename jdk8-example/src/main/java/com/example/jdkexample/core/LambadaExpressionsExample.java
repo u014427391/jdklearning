@@ -1,4 +1,4 @@
-package com.example.jdkexample;
+package com.example.jdkexample.core;
 
 
 import java.util.*;
