@@ -1,4 +1,4 @@
-package com.example.jdkexample.core;
+package com.example.jdkexample.core.functioninterfaces;
 
 
 import java.util.function.BiConsumer;
