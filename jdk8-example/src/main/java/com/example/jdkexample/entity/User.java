@@ -1,4 +1,4 @@
-package com.example.jdkexample.core.optional.entity;
+package com.example.jdkexample.entity;
 
 
 import lombok.AllArgsConstructor;

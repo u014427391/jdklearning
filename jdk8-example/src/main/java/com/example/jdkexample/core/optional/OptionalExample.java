@@ -1,9 +1,9 @@
 package com.example.jdkexample.core.optional;
 
 
-import com.example.jdkexample.core.optional.entity.Address;
-import com.example.jdkexample.core.optional.entity.City;
-import com.example.jdkexample.core.optional.entity.User;
+import com.example.jdkexample.entity.Address;
+import com.example.jdkexample.entity.City;
+import com.example.jdkexample.entity.User;
 
 import java.util.Optional;
 
