@@ -17,6 +17,7 @@ public class ScriptEngineExample {
         testJson();
         testJsFile();
         testInvokeFunction();
+        testBinding();
     }
 
 
@@ -53,7 +54,7 @@ public class ScriptEngineExample {
     }
 
 
-    private static void testInvokeFunction() throws ScriptException, NoSuchMethodException, FileNotFoundException {
+    private static void testInvokeFunction() throws ScriptException, NoSuchMethodException {
         String script = "var json ={\"name\":\"admin\" , \"mobiTel\":\"123\"};" +
                 "function jsonStringify(){ var result ={};result.name=json.name;result.mobiTel=json.mobiTel;print(JSON.stringify(result));}";
         ScriptEngineManager engineManager = new ScriptEngineManager();
@@ -62,4 +63,13 @@ public class ScriptEngineExample {
         Invocable invocable = (Invocable) scriptEngine;
         invocable.invokeFunction("jsonStringify");
     }
+
+    private static void testBinding() throws ScriptException, NoSuchMethodException {
+        ScriptEngineManager engineManager = new ScriptEngineManager();
+        ScriptEngine scriptEngine = engineManager.getEngineByName("JavaScript");
+        Bindings bindings = new SimpleBindings();
+        bindings.put("username","admin");
+        scriptEngine.eval("print('hello , ' + username);" , bindings);
+    }
+
 }
