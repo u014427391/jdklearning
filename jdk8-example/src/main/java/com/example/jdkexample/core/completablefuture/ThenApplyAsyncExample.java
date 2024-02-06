@@ -10,7 +10,7 @@ public class ThenApplyAsyncExample {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
 
         CompletableFuture<String> buyFuture = CompletableFuture.supplyAsync(() -> {
-            return "orderCode:123456";
+            return "code:123456";
         });
 
         CompletableFuture<Double> getPriceFuture = buyFuture.thenApplyAsync((code) -> {
